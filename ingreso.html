@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="StylesBasicos.css">
+    <link rel="stylesheet" href="stylesIngreso.css">
+</head>
+<body>
+    <header>
+    <img class="logo" src="Media_HaceteCargo/Logo_Inicial.png" alt="Logo Inicial Pagina">
+    <img class="logo right" src="Media_HaceteCargo/BurgerBar.png" alt="">
+  </header>
+  <div id="header-container"></div>
+
+     <form id="form-container">
+    <h2>Crear cuenta</h2>
+
+
+    <select id="tipo-usuario" required>
+      <option value="">Seleccionar tipo</option>
+      <option value="usuario">Usuario</option>
+      <option value="veterinario">Veterinario</option>
+    </select>
+
+    <div id="form-usuario" class="hidden">
+      <input type="text" placeholder="Nombre de usuario o Email" name="inicio" id="inicioUsuario">
+      <input type="password" placeholder="Contraseña" id="passUsuario">
+    </div>
+
+    <div id="form-veterinario" class="hidden">
+      <input  placeholder="Matricula o email" name="inicio"  id="inicioVeterinario"> 
+      <input type="password" placeholder="Contraseña" id="passVeterinario" >
+    </div>
+
+    <button type="submit">Ingresar</button>
+  </form>
+
+</body>
+  <script src="assets/main.js"></script>
+<script src="assets/ingreso.js"></script>
+<script>
+  configurarFormulario('tipo-usuario', 'form-usuario', 'form-veterinario');
+</script>
+
+</html>
